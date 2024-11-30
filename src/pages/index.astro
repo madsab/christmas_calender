@@ -8,14 +8,14 @@ const daysToXmas = daysToChristmas()
 ---
 
 <Layout title="Julekalender">
-  <main>
+  <main class="flex flex-col items-center text-center">
     <h1 id="header" class="text-4xl font-bold mb-4">
-      Nå kan du kose deg, det er bare {daysToXmas}
+      {daysToXmas}
       {daysToXmas > 1 ? "dager" : "dag"} til julaften
     </h1>
 
     <div class="w-full relative border-primary flex flex-wrap gap-4 justify-center">
-      {XmasDoors.map((door) => <XmasCard client:load id={door.id} content={door.content} />)}
+      {XmasDoors.map((door) => <XmasCard client:load id={door.id} content={door.content} details={door.details} />)}
     </div>
   </main>
   <script>
