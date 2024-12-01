@@ -31,12 +31,12 @@ const XmasCard: FC<Props> = ({ id, content, details }) => {
 
   return (
     <div
-      className={`${trigger && "animate-flip"} relative w-40 h-40 border-[1px] border-white rounded-lg shadow-lg hover:-translate-y-3 ease-linear duration-100 cursor-pointer overflow-hidden`}
+      className={`${trigger && "animate-flip"} relative w-40 h-40 border-[1px] border-white rounded-lg shadow-lg ease-linear duration-100 cursor-pointer overflow-hidden`}
       onClick={handleClick}
     >
       {/* Front Card */}
       <div
-        className={`${flipped ? "hidden" : ""} font-bold w-full h-full bg-gradient-to-br from-burgundy to-white flex justify-center items-center`}
+        className={`${flipped ? "hidden" : ""} font-bold w-full h-full bg-gradient-to-br from-blue-950 to-blue-700 flex justify-center items-center`}
       >
         {id}
       </div>
