@@ -5,7 +5,8 @@
     },
     {
         "id": 5,
-        "content": "🔔"
+        "content": "Movie Night 🎬",
+        "details": "Gjør klar øynene for vi skal på Kino!. Du har fått to billetter til Red One kl 18:00 på Nova kino. God fornøyelse (Ikke boutiqe denne gangen😢)!"
     },
     {
         "id": 24,
@@ -34,7 +35,8 @@
     },
     {
         "id": 3,
-        "content": "🎁"
+        "content": "Litt leske til starten av eksamensperioden 🧋",
+        "details": "Ta en titt i kjøleskapet!"
     },
     {
         "id": 14,
@@ -42,7 +44,8 @@
     },
     {
         "id": 7,
-        "content": "🎄"
+        "content": "Don't worry baby, breakfast is on me 🥐",
+        "details": "Velkommen til Bårnes bakeri. Hva kan vi friste med?"
     },
     {
         "id": 19,
@@ -50,7 +53,8 @@
     },
     {
         "id": 4,
-        "content": "🦌"
+        "content": "En søt overraskelse 🍬",
+        "details": "Ta en titt i skapet! Mitt skap ofc😘"
     },
     {
         "id": 23,
@@ -58,7 +62,8 @@
     },
     {
         "id": 6,
-        "content": "🕯️"
+        "content": "1/4 av veien er gjennomført 🎉. Det fortjener liten something",
+        "details": "Kos deg med julebord 😍🍾"
     },
     {
         "id": 10,
