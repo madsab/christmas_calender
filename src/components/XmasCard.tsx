@@ -43,7 +43,7 @@ const XmasCard: FC<Props> = ({ id, content, details }) => {
       {/* Back Card */}
       <XmasDialog content={content} details={details || ""}>
         <div
-          className={`${flipped ? "" : "hidden"} absolute top-0 left-0 font-bold w-full h-full border-2 flex justify-center items-center`}
+          className={`${flipped ? "" : "hidden"} absolute top-0 left-0 font-bold w-full h-full border-2 flex justify-center items-center bg-blue-950`}
         >
           {content}
         </div>

@@ -1,20 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import daysToChristmas from "../actions/daysToChristmas"
 import XmasDoors from "../data/XmasDoors.json"
 import XmasCard from "../components/XmasCard"
+import SnowEffect from "../components/SnowEffect"
+import bg from "../assets/snow_xmas_bg_tall.jpg"
 import { Image } from "astro:assets"
-import bg from "/public/christmasBG.jpg"
-
-const daysToXmas = daysToChristmas()
 ---
 
 <Layout title="Julekalender">
+  <Image
+    src={bg}
+    alt="Julebakgrunn"
+    class="absolute -z-10 inset-0 sm:-top-[1200px] max-sm:min-h-[2250px] object-cover"
+  />
+  <SnowEffect client:load />
   <main class="flex flex-col items-center text-center">
-    <h1 id="header" class="text-4xl font-bold mb-4">
-      {daysToXmas}
-      {daysToXmas > 1 ? "dager" : "dag"} til julaften
-    </h1>
+    <h1 id="header" class="text-4xl font-bold mb-4">til julaften</h1>
 
     <div class="w-full relative border-primary flex flex-wrap gap-4 justify-center">
       {XmasDoors.map((door) => <XmasCard client:load id={door.id} content={door.content} details={door.details} />)}
@@ -35,7 +36,7 @@ const daysToXmas = daysToChristmas()
           document.body.style.color = "#ffa500"
           header.textContent = "Sug og slikk, nå er det juuul!"
         } else {
-          header.textContent = `Nå kan du kose deg, det er bare ${daysToXmas} ${daysToXmas > 1 ? "dager" : "dag"} til julaften`
+          header.textContent = `${daysToXmas} ${daysToXmas > 1 ? "dager" : "dag"} til julaften`
         }
       }
     }
@@ -49,5 +50,6 @@ const daysToXmas = daysToChristmas()
       }
     }
     document.addEventListener("keydown", handleKeyDown)
+    updateHeader()
   </script>
 </Layout>
