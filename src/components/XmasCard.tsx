@@ -3,16 +3,17 @@ import daysToChristmas from "../actions/daysToChristmas"
 import XmasDialog from "./XmasDialog"
 
 interface Props {
-  id: number
+  id: string
+  num: number
   content: string
   details?: string
 }
 
-const XmasCard: FC<Props> = ({ id, content, details }) => {
+const XmasCard: FC<Props> = ({ id, num, content, details }) => {
   const [flipped, setFlipped] = useState<boolean>(false)
   const [trigger, setTrigger] = useState<boolean>(false)
   const handleClick = () => {
-    if (24 - id >= daysToChristmas()) {
+    if (24 - num >= daysToChristmas()) {
       setTrigger(true)
       setTimeout(() => {
         setFlipped(true)
@@ -31,6 +32,7 @@ const XmasCard: FC<Props> = ({ id, content, details }) => {
 
   return (
     <div
+      id="FuckDegOla"
       className={`${trigger && "animate-flip"} relative w-40 h-40 border-[1px] border-white rounded-lg shadow-lg ease-linear duration-100 cursor-pointer overflow-hidden`}
       onClick={handleClick}
     >
@@ -38,7 +40,7 @@ const XmasCard: FC<Props> = ({ id, content, details }) => {
       <div
         className={`${flipped ? "hidden" : ""} font-bold w-full h-full bg-gradient-to-br from-blue-950 to-blue-700 flex justify-center items-center`}
       >
-        {id}
+        {num}
       </div>
       {/* Back Card */}
       <XmasDialog content={content} details={details || ""}>
